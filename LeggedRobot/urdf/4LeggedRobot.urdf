@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot
+  name="4LeggedRobot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-4.67618896027923E-18 0.00112926420960739 0.000108071999785027"
+        rpy="0 0 0" />
+      <mass
+        value="0.0405747889566964" />
+      <inertia
+        ixx="6.21019690807018E-05"
+        ixy="-1.55992341540088E-20"
+        ixz="-1.56356271185154E-20"
+        iyy="7.04769172889022E-06"
+        iyz="4.9404265084224E-08"
+        izz="6.57507507221997E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LeggedRobot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LeggedRobot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="RL1">
+    <inertial>
+      <origin
+        xyz="0.0165355859242992 -3.35707190622647E-08 0.0165938065233727"
+        rpy="0 0 0" />
+      <mass
+        value="0.0154728310038278" />
+      <inertia
+        ixx="1.88017642656069E-06"
+        ixy="6.52552468191808E-12"
+        ixz="-7.36140757760406E-08"
+        iyy="2.06034003299536E-06"
+        iyz="-1.60999520321013E-12"
+        izz="1.26644048429643E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LeggedRobot/meshes/RL1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LeggedRobot/meshes/RL1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RL1"
+    type="revolute">
+    <origin
+      xyz="0.04 0.053 0.006"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RL1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="RL2">
+    <inertial>
+      <origin
+        xyz="-0.00615048052907508 -2.58694109237477E-07 -0.0443680838684956"
+        rpy="0 0 0" />
+      <mass
+        value="0.017775019102354" />
+      <inertia
+        ixx="4.28912167153196E-06"
+        ixy="-6.75500963480906E-11"
+        ixz="-7.00210531163762E-07"
+        iyy="4.50065807561721E-06"
+        iyz="-2.09226986527391E-11"
+        izz="1.41192588509136E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LeggedRobot/meshes/RL2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LeggedRobot/meshes/RL2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RL2"
+    type="revolute">
+    <origin
+      xyz="0.03 0 0.023"
+      rpy="0 0 0" />
+    <parent
+      link="RL1" />
+    <child
+      link="RL2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="RL3">
+    <inertial>
+      <origin
+        xyz="0.00474785006472449 -4.41506464914608E-07 0.0132196273413206"
+        rpy="0 0 0" />
+      <mass
+        value="0.00741481465639685" />
+      <inertia
+        ixx="1.12934099530278E-06"
+        ixy="1.65809730056242E-11"
+        ixz="2.3432880006625E-08"
+        iyy="9.84902524234339E-07"
+        iyz="7.69481103246776E-12"
+        izz="2.53579358853455E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LeggedRobot/meshes/RL3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LeggedRobot/meshes/RL3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RL3"
+    type="revolute">
+    <origin
+      xyz="0.005 0 -0.055"
+      rpy="0 0 0" />
+    <parent
+      link="RL2" />
+    <child
+      link="RL3" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="FL1">
+    <inertial>
+      <origin
+        xyz="0.0165355859242993 -3.3570719082214E-08 0.0165938065233726"
+        rpy="0 0 0" />
+      <mass
+        value="0.0154728310038278" />
+      <inertia
+        ixx="1.88017642656069E-06"
+        ixy="6.52552468170275E-12"
+        ixz="-7.36140757760412E-08"
+        iyy="2.06034003299536E-06"
+        iyz="-1.60999520308425E-12"
+        izz="1.26644048429643E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LeggedRobot/meshes/FL1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LeggedRobot/meshes/FL1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL1"
+    type="revolute">
+    <origin
+      xyz="0.04 -0.071 0.006"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="FL1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="FL2">
+    <inertial>
+      <origin
+        xyz="-0.00615048052834689 -2.58694000943895E-07 -0.0443680838683433"
+        rpy="0 0 0" />
+      <mass
+        value="0.0177750191011879" />
+      <inertia
+        ixx="4.28912167149233E-06"
+        ixy="-6.7550073300334E-11"
+        ixz="-7.00210531105169E-07"
+        iyy="4.50065807542378E-06"
+        iyz="-2.09226897043096E-11"
+        izz="1.41192588493079E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LeggedRobot/meshes/FL2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LeggedRobot/meshes/FL2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL2"
+    type="revolute">
+    <origin
+      xyz="0.03 0 0.023"
+      rpy="0 0 0" />
+    <parent
+      link="FL1" />
+    <child
+      link="FL2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="FL3">
+    <inertial>
+      <origin
+        xyz="0.00474785006472456 -4.41506464895526E-07 0.0132196273413205"
+        rpy="0 0 0" />
+      <mass
+        value="0.00741481465639687" />
+      <inertia
+        ixx="1.12934099530278E-06"
+        ixy="1.65809730057826E-11"
+        ixz="2.34328800066249E-08"
+        iyy="9.84902524234341E-07"
+        iyz="7.69481103225521E-12"
+        izz="2.53579358853454E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LeggedRobot/meshes/FL3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LeggedRobot/meshes/FL3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL3"
+    type="revolute">
+    <origin
+      xyz="0.005 0 -0.055"
+      rpy="0 0 0" />
+    <parent
+      link="FL2" />
+    <child
+      link="FL3" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="RR1">
+    <inertial>
+      <origin
+        xyz="-0.0165355859242992 3.35707190492543E-08 0.0165938065233727"
+        rpy="0 0 0" />
+      <mass
+        value="0.0154728310038278" />
+      <inertia
+        ixx="1.88017642656069E-06"
+        ixy="6.52552468170744E-12"
+        ixz="7.36140757760404E-08"
+        iyy="2.06034003299536E-06"
+        iyz="1.6099952031167E-12"
+        izz="1.26644048429643E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LeggedRobot/meshes/RR1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LeggedRobot/meshes/RR1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR1"
+    type="revolute">
+    <origin
+      xyz="-0.04 0.053 0.006"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RR1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="RR2">
+    <inertial>
+      <origin
+        xyz="0.00615048052834685 2.58694000949966E-07 -0.0443680838683432"
+        rpy="0 0 0" />
+      <mass
+        value="0.0177750191011879" />
+      <inertia
+        ixx="4.28912167149234E-06"
+        ixy="-6.75500733002476E-11"
+        ixz="7.0021053110517E-07"
+        iyy="4.50065807542378E-06"
+        iyz="2.09226897044436E-11"
+        izz="1.41192588493079E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LeggedRobot/meshes/RR2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LeggedRobot/meshes/RR2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR2"
+    type="revolute">
+    <origin
+      xyz="-0.03 0 0.023"
+      rpy="0 0 0" />
+    <parent
+      link="RR1" />
+    <child
+      link="RR2" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="RR3">
+    <inertial>
+      <origin
+        xyz="-0.0047478500647245 4.41506464874709E-07 0.0132196273413205"
+        rpy="0 0 0" />
+      <mass
+        value="0.00741481465639685" />
+      <inertia
+        ixx="1.12934099530278E-06"
+        ixy="1.65809730056098E-11"
+        ixz="-2.34328800066245E-08"
+        iyy="9.84902524234339E-07"
+        iyz="-7.6948110323119E-12"
+        izz="2.53579358853454E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LeggedRobot/meshes/RR3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LeggedRobot/meshes/RR3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR3"
+    type="revolute">
+    <origin
+      xyz="-0.00499999999999998 0 -0.055"
+      rpy="0 0 0" />
+    <parent
+      link="RR2" />
+    <child
+      link="RR3" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="FR1">
+    <inertial>
+      <origin
+        xyz="-0.0165355859242992 3.35707190587953E-08 0.0165938065233726"
+        rpy="0 0 0" />
+      <mass
+        value="0.0154728310038278" />
+      <inertia
+        ixx="1.88017642656069E-06"
+        ixy="6.52552468108426E-12"
+        ixz="7.36140757760413E-08"
+        iyy="2.06034003299536E-06"
+        iyz="1.60999520254119E-12"
+        izz="1.26644048429643E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LeggedRobot/meshes/FR1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LeggedRobot/meshes/FR1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR1"
+    type="revolute">
+    <origin
+      xyz="-0.04 -0.071 0.00599999999999998"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="FR1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="FR2">
+    <inertial>
+      <origin
+        xyz="0.00615048052824702 2.58693986573445E-07 -0.0443680838683225"
+        rpy="0 0 0" />
+      <mass
+        value="0.017775019101028" />
+      <inertia
+        ixx="4.28912167148695E-06"
+        ixy="-6.75500702402757E-11"
+        ixz="7.00210531097166E-07"
+        iyy="4.50065807539728E-06"
+        iyz="2.09226885203825E-11"
+        izz="1.4119258849088E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LeggedRobot/meshes/FR2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LeggedRobot/meshes/FR2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR2"
+    type="revolute">
+    <origin
+      xyz="-0.03 0 0.023"
+      rpy="0 0 0" />
+    <parent
+      link="FR1" />
+    <child
+      link="FR2" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="FR3">
+    <inertial>
+      <origin
+        xyz="-0.00474785006485695 4.41507593115439E-07 0.0132196273437121"
+        rpy="0 0 0" />
+      <mass
+        value="0.0074148146565658" />
+      <inertia
+        ixx="1.1293409959014E-06"
+        ixy="1.65809556542359E-11"
+        ixz="-2.3432880004565E-08"
+        iyy="9.84902524925173E-07"
+        iyz="-7.69489425583651E-12"
+        izz="2.53579358752959E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LeggedRobot/meshes/FR3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LeggedRobot/meshes/FR3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR3"
+    type="revolute">
+    <origin
+      xyz="-0.00499999999999999 0 -0.055"
+      rpy="0 0 0" />
+    <parent
+      link="FR2" />
+    <child
+      link="FR3" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
