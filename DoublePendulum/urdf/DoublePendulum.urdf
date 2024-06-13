@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="DoublePendulum">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="2.22778080438587E-18 0.0000 0.00019484438290193"
+        rpy="0 0 0" />
+      <mass
+        value="7.64258581963359" />
+      <inertia
+        ixx="0.196242928888261"
+        ixy="-7.01395317802837E-19"
+        ixz="-4.26515781331322E-21"
+        iyy="0.00427744682275082"
+        iyz="-0.000404930792397016"
+        izz="0.196191513654848" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DoublePendulum/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.647058823529412 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DoublePendulum/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="A1">
+    <inertial>
+      <origin
+        xyz="0.0737949007115278 -0.067485647577658 -0.0075"
+        rpy="0 0 0" />
+      <mass
+        value="0.350094024383882" />
+      <inertia
+        ixx="0.000682901165952696"
+        ixy="0.000687363022978262"
+        ixz="9.66199963952858E-21"
+        iyy="0.000805930512334875"
+        iyz="-6.49515796525027E-21"
+        izz="0.00147570315237318" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DoublePendulum/meshes/A1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DoublePendulum/meshes/A1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="A1"
+    type="continuous">
+    <origin
+      xyz="0 -0.04 0.48"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="A1" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="A2">
+    <inertial>
+      <origin
+        xyz="2.4980018054066E-16 0.0999999999999995 0.0075"
+        rpy="0 0 0" />
+      <mass
+        value="0.350094024383882" />
+      <inertia
+        ixx="0.00143452596106319"
+        ixy="-1.49481697663122E-20"
+        ixz="7.63741374107627E-22"
+        iyy="5.43057172243773E-05"
+        iyz="-3.859728135749E-21"
+        izz="0.00147570315237318" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DoublePendulum/meshes/A2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DoublePendulum/meshes/A2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="A2"
+    type="continuous">
+    <origin
+      xyz="0.14759 -0.13497 0"
+      rpy="0 0 0" />
+    <parent
+      link="A1" />
+    <child
+      link="A2" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+</robot>
