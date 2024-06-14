@@ -5,6 +5,6 @@ Dynamics
 
 NN
 
-![NN_RealAndPredictedData](ttps://github.com/fluci0/Robots/blob/main/NeuralNetwork.png?raw=true)
+<img src='./NeuralNetwork.png' width=100%>
 
 
