@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Dec 19 14:12:11 2019
+Created on Thu Dec 20 19:12:11 2024
 
-@author: FR10_
+@author: fluci0
 """
 import pybullet as p
 import pybullet_data
@@ -36,9 +36,9 @@ p.setRealTimeSimulation(1) #1: enable , 2: disable, default time step is 1/240 s
 p.setGravity(0, 0, -9.81)
 
 #Changing colors of the links
-p.changeVisualShape(boxId,linkIndex=-1, rgbaColor=(1, 0, 1, 1)) #Base
-p.changeVisualShape(boxId,linkIndex=0, rgbaColor=(0, 1, 1, 1)) #A1
-p.changeVisualShape(boxId,linkIndex=1, rgbaColor=(1, 1, 1, 1)) #A2
+p.changeVisualShape(boxId,linkIndex = -1, rgbaColor = (1, 0, 1, 1)) #Base
+p.changeVisualShape(boxId,linkIndex = 0, rgbaColor = (0, 1, 1, 1)) #A1
+p.changeVisualShape(boxId,linkIndex = 1, rgbaColor = (1, 1, 1, 1)) #A2
 
 #Creating a constraint between the plane and the base of the pendulum
 c1 = p.createConstraint(boxId, -1, -1, -1, p.JOINT_FIXED, [0, 0, 0], [0, 0, 0], [0, 0, 0])
